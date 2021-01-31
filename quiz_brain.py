@@ -13,9 +13,7 @@ class QuizBrain:
     def next_question(self):
         self.current_question = self.question_list[self.question_number]
         self.question_number += 1
-        return f"Q.{self.question_number}: {unescape(self.current_question.text)} (True/False): "
-        # user_answer = input()
-        # self.check_answer(user_answer)
+        return f"Q.{self.question_number}: {unescape(self.current_question.text)}"
 
     def check_answer(self, user_answer):
         correct_answer = self.current_question.answer
